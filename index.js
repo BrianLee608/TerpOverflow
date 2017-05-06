@@ -42,10 +42,6 @@ app.use(function(req, res, next) {
   res.locals.user = req.user;
   next();
 });
-/* Add whatever endpoints you need! Remember that your API endpoints must
- * have '/api' prepended to them. Please remember that you need at least 5
- * endpoints for the API, and 5 others.
- */
 
 app.get('/', postController.index);
 app.get('/questions/ask', postController.newQuestionGet);
@@ -76,14 +72,6 @@ app.get('/api/questions', apiController.getQuestions);
 app.get('/api/questions/:qid', apiController.getQuestionApi);
 app.post('/api/signup', apiController.signupApiPost);
 
-var Tag = require('./models/Tag')
-app.get('/secret', function(req,res) {
-  let n = new Tag({tagname: 'Nelson Padua-Perez'});
-  n.save(function(err) {
-    res.send("{}")
-  })
-
-})
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
