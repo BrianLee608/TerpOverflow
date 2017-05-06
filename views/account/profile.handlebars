@@ -1,0 +1,54 @@
+<div class="container profile-container">
+  <div class="row">
+
+  {{#if messages.error}}
+    <div role="alert" class="alert alert-danger">
+      {{#each messages.error}}
+        <div>{{msg}}</div>
+      {{/each}}
+    </div>
+  {{/if}}
+
+  <div class="col-sm-4 col-xs-12">
+  <img alt="" class="avatar width-full rounded-2" height="230" src="{{{user.gravatar}}}" width="230">
+  <h5>{{{user.displayName}}}</h5>
+  <p>{{{user.email}}}</p>
+  <span class="glyphicon glyphicon-star"></span> 13 Reputation Points<br />
+  <span class="glyphicon glyphicon-question-sign"></span> 13 questions asked<br />
+  <span class="glyphicon glyphicon-pencil"></span> 13 questions answered<br />
+  <span class="glyphicon glyphicon-calendar"></span> Member for 1 year, 9 months<br />
+  </div>
+
+  <div class="col-sm-8 col-xs-12">
+
+      <div class="card">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Questions</a></li>
+          <!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Answers</a></li>
+          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Questions</a></li> -->
+        </ul>
+
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home">
+            {{#each questions}}
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <a href="{{{this.url}}}">
+                    {{{this.title}}}
+                  </a>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+
+
+          <div role="tabpanel" class="tab-pane" id="profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+          <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+        </div>
+      </div>
+
+  </div>
+  </div>
+</div>

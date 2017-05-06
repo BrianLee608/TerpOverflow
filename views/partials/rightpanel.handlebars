@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-6 num-questions-right-panel">
+    {{#if data.questionCount}}
+    <h5>
+        {{{data.questionCount}}} questions
+    </h5>
+
+    {{/if}}
+  </div>
+  <div class="col-sm-6">
+    <a href="/questions/ask" class="btn btn-primary btn-sm">Ask Question</a>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-6 num-questions-right-panel search-tags-list">
+    <div id="tags-right-panel">
+      <div class="row right-panel-row">
+          <div class="tag-search-bar">
+            <input id="tag-search-input" type="text" placeholder="Search Tags">
+          </div>
+      </div>
+
+      <ul id="tags-search-list" class="list-group">
+
+      </ul>
+    </div>
+  </div>
+
+
+
+</div>

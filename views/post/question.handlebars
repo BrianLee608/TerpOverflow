@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="col-sm-10 col-lg-8">
+    <h5><b>{{{questionTitle}}}</b></h5>
+    <hr />
+    <div class="row">
+
+      <div class="col-sm-11">
+        {{{questionBody}}}
+        <br />
+        {{#each questionTags}}
+          <a href="/tags/{{{this}}}"><span class="badge tag-span">{{{this}}}</span></a>
+        {{/each}}
+        <br />
+        <div class="question-author-section">
+          Asked on {{{questionDate}}}<br />
+          <img src="{{{authorGravatar}}}" height="35px" />
+          <a href="{{{authorUrl}}}">{{{authorDisplayName}}}</a>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="row">
+      <h5>{{{answers.length}}} Answers</h5>
+      <hr id="line-break" />
+      {{#each answers}}
+
+        <div class="row">
+          <div class="col-sm-11">
+            {{{this.ansBody}}}
+            <br />
+            <div class="question-author-section">
+              Answered on {{{this.date}}}<br />
+              <img src="{{{this.authorGravatar}}}" height="35px" />
+              <a href="{{{this.authorUrl}}}">{{{this.authorDisplayName}}}</a>
+            </div>
+          </div>
+          <br />
+        </div>
+        <hr id="line-break" />
+      {{/each}}
+
+      <form id="answer-form" method="POST">
+        {{#if messages.error}}
+          <div role="alert" class="alert alert-danger">
+            {{#each messages.error}}
+              <div>{{msg}}</div>
+            {{/each}}
+          </div>
+        {{/if}}
+        <div class="row form-group">
+          <label for="answer-content">Your Answer</label>
+          <input name="answerContent" type="hidden">
+          <div id="editor2"></div>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary" type="submit">Post Your Answer</button>
+        </div>
+    </form>
+
+    </div>
+
+
+  </div>
+
+  <div class="col-sm-4 visible-lg">
+    {{>rightpanel}}
+  </div>
+</div>
+
+<link href="/public/lib/katex/katex.min.css" rel="stylesheet">
+<script src="/public/lib/katex/katex.min.js"></script>
+<link href="//cdn.quilljs.com/1.2.4/quill.snow.css" rel="stylesheet">
+<script src="//cdn.quilljs.com/1.2.4/quill.min.js"></script>
+<script src="/public/js/questionpage.js"></script>

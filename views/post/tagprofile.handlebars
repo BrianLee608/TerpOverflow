@@ -1,0 +1,10 @@
+<h1>{{{tag.tagname}}}</h1>
+<h4>{{{questions.length}}} questions linked to this tag</h4>
+
+<ul class="list-group">
+  {{#each questions}}
+    <li class="list-group-item">
+      <span><a href="{{{this.url}}}">{{{this.title}}}</a></span>
+    </li>
+  {{/each}}
+</ul>

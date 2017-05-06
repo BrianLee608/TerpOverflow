@@ -1,0 +1,22 @@
+<div class="container-fluid content">
+  <div class="row">
+    <div class="col-sm-10 col-lg-8">
+      <span id="top-questions-label">Questions</span>
+      <a href="/questions/ask" class="btn btn-primary btn-sm visible-md visible-sm visible-xs ask-button">Ask Question</a>
+        <hr id="line-break" />
+    <ul class="list-group" id="home-questions-list">
+      {{#each data.questions}}
+      <li class="list-group-item borderless">
+        {{>questioncard}}
+      </li>
+      {{/each}}
+    </ul>
+    </div>
+
+    <div class="col-sm-4 visible-lg">
+      {{>rightpanel}}
+    </div>
+  </div>
+
+  <ul id="pagination-demo" class="pagination-sm"></ul>
+</div>

@@ -1,0 +1,146 @@
+#line-break {
+  clear:both;
+  display:block;
+  background-color:#acb7b7;
+  height: 1px;
+  margin: 5px;
+}
+
+body {
+  color: #242729;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  background: #FFF;
+}
+
+.container {
+  width: 100%;
+}
+
+#editor {
+  height: 375px;
+}
+
+.profile-container {
+  width: 100%;
+}
+
+.account-button {
+  width: 100%;
+}
+
+.question-author-section {
+  float: right;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.tag-span {
+  color: #39739d;
+  background-color: #E1ECF4;
+}
+.main-account {
+ 	background-color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 360px;
+  padding: 40px 40px;
+
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+
+span.glyphicon-triangle-top, span.glyphicon-triangle-bottom {
+    font-size: 2em;
+}
+
+.question-vote-section {
+  text-align: center;
+}
+
+.question-card-stats {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  color: #FFF;
+  background-color: #5fba7d;
+  border-width: 10px;
+  border-color: #FFF;
+}
+
+.post-meta {
+  text-align: center;
+  font-size: 14px;
+}
+
+li.borderless {
+  border: none;
+}
+
+.ask-button {
+  width: 150px;
+  float: right;
+  border-radius: 1px;
+}
+
+.col-sm-6 num-questions-right-panel {
+  text-align: center;
+}
+
+.question-card-tag {
+  background-color: #e4e4e4;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: default;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.question-card-author {
+  float: right;
+}
+
+.tag-list-large-icon, .user-list-large-icon {
+  padding: 5px;
+}
+
+.user-list-large-icon {
+  width: 215px;
+  display: -webkit-inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-flex-pack: center;
+  -webkit-justify-content: center;
+  -webkit-flex-align: center;
+  -webkit-align-items: center;
+  vertical-align: top;
+}
+
+.right-panel-row{
+  padding-top: 10px;
+  padding-left: 18px;
+}
+
+.search-tags-list {
+  width: 100%;
+}
